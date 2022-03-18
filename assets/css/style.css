@@ -1,3 +1,8 @@
 body {
     background: rgb(35, 60, 143);
 }
+
+.rules {
+    height: 100px;
+    padding-right: 5px;
+}
