@@ -1,8 +1,38 @@
 body {
-    background: rgb(35, 60, 143);
+    background-color: rgb(241, 233, 233);
+    font-family:  sans-serif;
+    color: #1a558b;
+    text-align: center;
 }
 
 .rules {
-    height: 100px;
-    padding-right: 5px;
+    width: 55%;
+    height: 55%;
+    max-height: 400px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+button {
+    font-size: xx-large;
+    color: rgb(165, 70, 6);
+
+}
+
+
+h1{
+    font-size: x-large;
+}
+
+h2{
+    font-size: larger;
+}
+
+h3 {
+    font-size:x-large;
+    text-underline-position: below;
+    color: rgb(11, 5, 34);
+    text-transform: uppercase;
 }
