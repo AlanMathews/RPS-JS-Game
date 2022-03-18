@@ -4,7 +4,7 @@ const resultDisplay = document.createElement('h1')
 const gameGrid = document.getElementById('game')
 gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
 
-const choices = ['Rock', 'Paper', 'Scissors']
+const choices = ['Rock', 'Paper', 'Scissors', 'Lizzard']
 let userChoice
 let computerChoice
 
@@ -36,16 +36,23 @@ const getResult = () => {
     case 'ScissorsPaper':
     case 'RockScissors':
     case 'PaperRock':
+    case 'LizzardPaper':
+    case 'ScissorsLizzard':
       resultDisplay.innerHTML = "YOU WIN!" //Prints out You Win for all cases where user choice defeats computer
       break
+
     case 'PaperScissors':
     case 'ScissorsRock':
     case 'RockPaper':
+    case 'PaperLizzard':
+    case 'LizzardScissors':
       resultDisplay.innerHTML = "YOU LOSE!" //Prints out You Lose for all cases where computer choice defeats computer
       break
+      
     case 'PaperPaper':
     case 'ScissorsScissors':
     case 'RockRock':
+    case 'LizzardLizzard':
     resultDisplay.innerHTML = "ITS A DRAW!"// Where the answers are the same the computer displays "ITS A DRAW!"
     break
   }
