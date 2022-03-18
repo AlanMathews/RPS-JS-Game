@@ -1,20 +1,19 @@
-
 const userChoiceDisplay = document.createElement('h2')
 const computerChoiceDisplay = document.createElement('h2')
 const resultDisplay = document.createElement('h2')
-const player_Score = document.createElement('h2')
 const gameGrid = document.getElementById('game')
 gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
 
 const choices = ['Rock', 'Paper', 'Scissors', 'Lizzard', 'Spock']
-let userChoice
-let computerChoice
+let userChoice;
+let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
-let moves = 0;
+
+
 
 const handleClick = (e) => {
-  userChoice = e.target.id
+  userChoice = e.target.id // assigns the user choice as the event clicked button
   userChoiceDisplay.innerHTML = 'User Choice: ' + userChoice
   generateComputerChoice()
   getResult()
@@ -79,6 +78,4 @@ const getResult = () => {
     break
   }
 }
-
-
 
