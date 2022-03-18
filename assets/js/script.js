@@ -4,7 +4,7 @@ const resultDisplay = document.createElement('h1')
 const gameGrid = document.getElementById('game')
 gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
 
-const choices = ['Rock', 'Paper', 'Scissors', 'Lizzard']
+const choices = ['Rock', 'Paper', 'Scissors', 'Lizzard', 'Spock']
 let userChoice
 let computerChoice
 
@@ -34,25 +34,38 @@ for (let i = 0; i < choices.length; i++) {
 const getResult = () => {
   switch (userChoice + computerChoice) {
     case 'ScissorsPaper':
-    case 'RockScissors':
-    case 'PaperRock':
-    case 'LizzardPaper':
     case 'ScissorsLizzard':
+    case 'PaperRock':
+    case 'PaperSpock': 
+    case 'RockScissors':
+    case 'RockLizzard': 
+    case 'LizzardPaper':
+    case 'LizzardSpock': 
+    case 'SpockScissors':
+    case 'SpockRock':
       resultDisplay.innerHTML = "YOU WIN!" //Prints out You Win for all cases where user choice defeats computer
       break
 
     case 'PaperScissors':
-    case 'ScissorsRock':
-    case 'RockPaper':
     case 'PaperLizzard':
+    case 'ScissorsRock':
+    case 'ScissorsSpock':
+    case 'RockPaper':
+    case 'RockSpock':
     case 'LizzardScissors':
+    case 'LizzardRock':
+    case 'SpockPaper':
+    case 'SpockLizzard':
+    
       resultDisplay.innerHTML = "YOU LOSE!" //Prints out You Lose for all cases where computer choice defeats computer
       break
-      
+
     case 'PaperPaper':
     case 'ScissorsScissors':
     case 'RockRock':
     case 'LizzardLizzard':
+    case 'SpockSpock':
+    
     resultDisplay.innerHTML = "ITS A DRAW!"// Where the answers are the same the computer displays "ITS A DRAW!"
     break
   }
